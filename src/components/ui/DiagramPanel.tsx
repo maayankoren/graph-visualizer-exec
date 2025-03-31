@@ -25,6 +25,7 @@ import  {ReactFlow,
   Node,
   Edge,
   Position,
+  MarkerType
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { CustomNode } from './../CustomNode';
@@ -89,10 +90,22 @@ const nodes: Node[] = [
 ];
 
 const edges: Edge[] = [
-  { id: 'e1-2', source: '1', target: '2' },
-  { id: 'e2-3', source: '2', target: '3' },
-  { id: 'e3-4', source: '3', target: '4' },
-  { id: 'e3-5', source: '3', target: '5' },
+  { id: 'e1-2', source: '1', target: '2',type: 'default',
+    markerEnd: {
+      type: MarkerType.ArrowClosed, 
+    }, },
+  { id: 'e2-3', source: '2', target: '3',type: 'default',
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+    }, },
+  { id: 'e3-4', source: '3', target: '4' ,type: 'default',
+    markerEnd: {
+      type: MarkerType.ArrowClosed, 
+    }, },
+  { id: 'e3-5', source: '3', target: '5' ,type: 'default',
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+    }, },
 ];
 
 export default function DiagramPanel() {
