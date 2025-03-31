@@ -16,8 +16,8 @@ export function CustomNode({ data }: any) {
       <div className="font-medium">{data.label}</div>
       {data.sub && <div className="text-[10px] text-muted-foreground">{data.sub}</div>}
 
-      <Handle type="source" position={Position.Right} className="!bg-transparent" />
-      <Handle type="target" position={Position.Left} className="!bg-transparent" />
+      <Handle type="source" position={Position.Right} className="!bg-transparent !border-none !shadow-none" />
+      <Handle type="target" position={Position.Left} className="!bg-transparent !border-none !shadow-none" />
     </div>
   );
 }

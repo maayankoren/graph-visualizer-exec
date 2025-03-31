@@ -122,8 +122,8 @@ export default function DiagramPanel() {
           fitView
           fitViewOptions={{ padding: 0.2 }}
         >
-          <Background />
-          <Controls showInteractive={false} />
+          {/* <Background /> */}
+          {/* <Controls showInteractive={false} /> */}
         </ReactFlow>
 
         {/* Legend */}
