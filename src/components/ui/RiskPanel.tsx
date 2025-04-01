@@ -1,10 +1,22 @@
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { DataTable } from "../DataTable";
+import { columns } from "./../Columns"
 
 export default function RiskPanel() {
+  const data = [
+    {
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "m@example.com",
+    },
+    // ...
+  ];
   return (
     <Card className="flex-1">
-      <CardHeader>
+      <DataTable columns={columns} data={data}/>
+      {/* <CardHeader>
         <CardTitle>Risks</CardTitle>
       </CardHeader>
       <CardContent className="space-y-3 text-sm">
@@ -22,7 +34,7 @@ export default function RiskPanel() {
           </div>
           <Badge variant="destructive">Critical</Badge>
         </div>
-      </CardContent>
+      </CardContent> */}
     </Card>
   );
 }
