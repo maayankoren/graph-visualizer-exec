@@ -41,11 +41,17 @@ import { SectionCards } from "@/components/section-cards"
 import { SiteHeader } from "@/components/site-header"
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 
-import data from "./data.json"
 import DescriptionPanel from "@/components/ui/DescriptionPanel"
 import DiagramPanel from "@/components/ui/DiagramPanel"
 import RiskPanel from "@/components/ui/RiskPanel"
 import RiskSummary from "@/components/ui/RiskSummery"
+
+const data = [
+  { name: "Critical", value: 2, color: "#B91C1C" },
+  { name: "High", value: 0, color: "#DC2626" },
+  { name: "Medium", value: 0, color: "#FACC15" },
+  { name: "Low", value: 0, color: "#22C55E" },
+]
 
 export default function Page() {
   return (
@@ -73,7 +79,7 @@ export default function Page() {
 
               <div className="flex gap-4">
                 <RiskPanel />
-                <RiskSummary />
+                <RiskSummary data={data}/>
               </div>
             </div>
           </div>

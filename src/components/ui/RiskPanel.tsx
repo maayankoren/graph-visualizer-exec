@@ -7,9 +7,8 @@ export default function RiskPanel() {
   const data = [
     {
       id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
+      asset: 100,
+      contextualRisk: "pending"
     },
     // ...
   ];

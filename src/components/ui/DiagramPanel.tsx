@@ -121,6 +121,7 @@ export default function DiagramPanel() {
           nodeTypes={nodeTypes}
           fitView
           fitViewOptions={{ padding: 0.2 }}
+         
         >
           {/* <Background /> */}
           {/* <Controls showInteractive={false} /> */}
@@ -128,9 +129,9 @@ export default function DiagramPanel() {
 
         {/* Legend */}
         <div className="flex gap-4 justify-center mt-4 text-sm">
-          <Legend color="red" label="Lorem" />
-          <Legend color="orange" label="Lorem" />
-          <Legend color="green" label="Lorem" />
+          {/* <Legend color="red" label="Lorem" /> */}
+          {/* <Legend color="orange" label="Lorem" /> */}
+          {/* <Legend color="green" label="Lorem" /> */}
         </div>
       </CardContent>
     </Card>
