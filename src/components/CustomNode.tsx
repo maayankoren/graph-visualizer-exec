@@ -5,11 +5,11 @@ export function CustomNode({ data }: any) {
   return (
     <div
       className={cn(
-        'rounded-full px-4 py-2 border shadow-sm flex flex-col items-center text-center text-xs',
-        data.color === 'red' && 'bg-red-100 text-red-800 border-red-300',
-        data.color === 'blue' && 'bg-blue-100 text-blue-800 border-blue-300',
-        data.color === 'orange' && 'bg-orange-100 text-orange-800 border-orange-300',
-        data.color === 'green' && 'bg-green-100 text-green-800 border-green-300'
+        'rounded-full w-20 h-20  shadow-sm flex flex-col justify-center items-center text-center text-xs',
+        data.color === 'red' && 'bg-red-100 text-red-800 ',
+        data.color === 'blue' && 'bg-blue-100 text-blue-800 ',
+        data.color === 'orange' && 'bg-orange-100 text-orange-800 ',
+        data.color === 'green' && 'bg-green-100 text-green-800 '
       )}
     >
       <div className="text-lg">{data.icon}</div>

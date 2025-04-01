@@ -30,7 +30,7 @@ import  {ReactFlow,
 import '@xyflow/react/dist/style.css';
 import { CustomNode } from './../CustomNode';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Shield, Book, Users } from 'lucide-react';
+import { VenetianMask,Server} from 'lucide-react';
 
 const nodeTypes = { custom: CustomNode };
 
@@ -41,7 +41,7 @@ const nodes: Node[] = [
     position: { x: 0, y: 100 },
     data: {
       label: 'Loremipsumm',
-      icon: <Book size={16} />,
+      icon: <VenetianMask size={16} />,
       color: 'red',
     },
   },
@@ -51,7 +51,7 @@ const nodes: Node[] = [
     position: { x: 180, y: 100 },
     data: {
       label: 'Loremipsu',
-      icon: <Shield size={16} />,
+      icon: <Server size={16} />,
       color: 'blue',
     },
   },
@@ -61,7 +61,7 @@ const nodes: Node[] = [
     position: { x: 360, y: 100 },
     data: {
       label: 'Loremipsu',
-      icon: <Shield size={16} />,
+      icon: <Server size={16} />,
       color: 'blue',
     },
   },
@@ -72,7 +72,7 @@ const nodes: Node[] = [
     data: {
       label: 'Loremipsumdolorsit',
       sub: '192.168.1.1',
-      icon: <Shield size={16} />,
+      icon: <Server size={16} />,
       color: 'red',
     },
   },
@@ -83,7 +83,7 @@ const nodes: Node[] = [
     data: {
       label: 'Loremipsumdolorsit002',
       sub: '192.168.1.2',
-      icon: <Shield size={16} />,
+      icon: <Server size={16} />,
       color: 'red',
     },
   },
@@ -121,7 +121,11 @@ export default function DiagramPanel() {
           nodeTypes={nodeTypes}
           fitView
           fitViewOptions={{ padding: 0.2 }}
-         
+          nodesDraggable={false}
+          elementsSelectable={false}
+          panOnDrag={false}
+          zoomOnScroll={false}
+          zoomOnPinch={false}
         >
           {/* <Background /> */}
           {/* <Controls showInteractive={false} /> */}
