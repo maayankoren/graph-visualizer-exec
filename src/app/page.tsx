@@ -67,12 +67,12 @@ export default function Page() {
           <div className="grid gap-6 lg:grid-cols-[1fr_2fr]">
 
             {/* --- שמאל: Description --- */}
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 border-none">
               <DescriptionPanel />
             </div>
 
             {/* --- ימין: עטוף ב-Card אחד --- */}
-            <Card>
+            <Card className="border-none">
               <CardContent className="flex flex-col gap-5 ">
 
                 {/* כותרת עליונה */}

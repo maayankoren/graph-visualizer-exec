@@ -17,12 +17,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body className="min-h-screen flex flex-col bg-white">
+      <body className="min-h-screen flex flex-col">
         <SidebarProvider>
           <div className="flex flex-1 min-h-screen">
             <AppSidebar />
-            <main className="flex-1 flex flex-col">
-              {/* <SidebarTrigger /> */}
+            <main className="flex-1 flex flex-col h-screen">
+              <SidebarTrigger />
               {children}
             </main>
           </div>

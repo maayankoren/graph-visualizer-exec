@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function DescriptionPanel() {
   return (
-    <Card className="h-full" >
+    <Card className="h-full border-none" >
       <CardHeader>
         <CardTitle>Description</CardTitle>
       </CardHeader>
