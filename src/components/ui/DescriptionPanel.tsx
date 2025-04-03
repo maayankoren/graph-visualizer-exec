@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function DescriptionPanel() {
   return (
-    <Card className="w-[420px]">
+    <Card >
       <CardHeader>
         <CardTitle>Description</CardTitle>
       </CardHeader>

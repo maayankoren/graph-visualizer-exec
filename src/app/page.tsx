@@ -45,6 +45,9 @@ import DescriptionPanel from "@/components/ui/DescriptionPanel"
 import DiagramPanel from "@/components/ui/DiagramPanel"
 import RiskPanel from "@/components/ui/RiskPanel"
 import RiskSummary from "@/components/ui/RiskSummery"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { ShieldX } from "lucide-react"
 
 const data = [
   { name: "Critical", value: 2, color: "#B91C1C" },
@@ -59,34 +62,133 @@ export default function Page() {
       <AppSidebar variant="inset" />
       <SidebarInset>
         <SiteHeader />
-        <div className="flex flex-1 flex-col">
-          {/* <div className="@container/main flex flex-1 flex-col gap-2">
-            <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-              <SectionCards />
-              <div className="px-4 lg:px-6">
-                <ChartAreaInteractive />
-              </div>
-              <DataTable data={data} />
-            </div>
-          </div> */}
-          <div className="flex gap-6">
-            {/* צד שמאל */}
-            <DescriptionPanel />
 
-            {/* צד ימין */}
-            <div className="flex flex-col flex-1 gap-4">
-              <DiagramPanel />
+        <div className="flex flex-1 flex-col px-4 py-6 md:px-8 md:py-8 bg-[#FAFAFA]">
+          <div className="grid gap-6 lg:grid-cols-[1fr_2fr]">
 
-              <div className="flex gap-4">
-                <RiskPanel />
-                <RiskSummary data={data}/>
-              </div>
+            {/* --- שמאל: Description --- */}
+            <div className="flex flex-col gap-6">
+              <DescriptionPanel />
             </div>
+
+            {/* --- ימין: עטוף ב-Card אחד --- */}
+            <Card>
+              <CardContent className="flex flex-col gap-6 pt-6">
+
+                {/* כותרת עליונה */}
+                <h2 className="text-xl font-semibold text-green-700 px-2">
+                  Lorem Lorem Lorem
+                </h2>
+
+                {/* גרף */}
+                {/* <Card>
+            <DiagramPanel />
+            zxkczxlkj
+            <Separator className="my-4 w-[90%] mx-auto bg-gray-200" />
+            <ShieldX />
+
+            </Card> */}
+                <Card className="shadow-md rounded-xl overflow-hidden h-[500px]">
+
+
+                  <CardContent>
+                    {/* מעטפת לגרף */}
+                    <DiagramPanel />
+
+
+                    {/* קו הפרדה קצר במרכז */}
+                    {/* <div class
+                    Name="w-2/3 h-px bg-gray-200 mx-auto my-4" /> */}
+                    <Separator className="my-4 w-[90%] mx-auto bg-gray-200" />
+                    {/* #e5372b */}
+                    {/* #00983e */}
+                    <div className="h-[20%] flex gap-6">
+                      <div className="rounded-full bg-[#FF9500] w-10 h-10 flex items-center justify-center"> <ShieldX color='white' /></div>
+                   
+                    <ShieldX />
+                    <ShieldX />
+                    </div>
+                    {/* לג'נד */}
+                    {/* <div className="flex justify-center gap-6">
+          <Legend color="red" label="Lorem" />
+          <Legend color="orange" label="Lorem" />
+          <Legend color="green" label="Lorem" />
+        </div> */}
+                  </CardContent>
+                </Card>
+
+                {/* מקרא צבעים */}
+
+
+                {/* טבלת נכסים + סיכום */}
+                <div className="flex flex-col gap-6">
+                  <h2 className="text-xl font-semibold text-green-700 px-2">
+                    Lorem Ipsum Dolor Sit
+                  </h2>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <RiskPanel />
+                    <RiskSummary data={data} />
+                  </div>
+                </div>
+
+              </CardContent>
+            </Card>
           </div>
-
-
         </div>
       </SidebarInset>
     </SidebarProvider>
+
+    // <SidebarProvider>
+    //   <AppSidebar variant="inset" />
+    //   <SidebarInset>
+    //     <SiteHeader />
+    //     <div className="flex flex-1 flex-col">
+    //       {/* <div className="@container/main flex flex-1 flex-col gap-2">
+    //         <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+    //           <SectionCards />
+    //           <div className="px-4 lg:px-6">
+    //             <ChartAreaInteractive />
+    //           </div>
+    //           <DataTable data={data} />
+    //         </div>
+    //       </div> */}
+    //       <div className="flex gap-8">
+    //         <div className="flex  flex-col ">
+    //           {/* צד שמאל */}
+    //           <DescriptionPanel />
+    //           {/* צד ימין */}
+    //           {/* <div className="flex flex-col flex-1 gap-4">
+    //           <DiagramPanel />
+
+    //           <div className="flex gap-4">
+    //             <RiskPanel />
+    //             <RiskSummary data={data}/>
+    //           </div>
+    //         </div> */}
+    //         </div>
+
+    //           {/* צד שמאל */}
+    //           {/* <DescriptionPanel /> */}
+    //           <Card >
+    //           <div className="flex flex-col gap-4   ">
+    //             {/* צד ימין */}
+    //             {/* {/* <div className="flex flex-col flex-1 gap-4"> */}
+    //             <DiagramPanel />
+
+    //             <div className="flex gap-4">
+    //               <RiskPanel />
+    //               <RiskSummary data={data} />
+    //             </div>
+    //         </div>
+
+    //           </Card>
+
+
+    //       </div>
+
+    //     </div>
+    //   </SidebarInset>
+    // </SidebarProvider>
   )
 }
