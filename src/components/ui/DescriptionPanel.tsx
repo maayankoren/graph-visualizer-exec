@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function DescriptionPanel() {
   return (
-    <Card >
+    <Card className="h-full" >
       <CardHeader>
         <CardTitle>Description</CardTitle>
       </CardHeader>
@@ -20,6 +20,14 @@ export default function DescriptionPanel() {
         <div className="space-y-2 text-sm">
           <div className="flex justify-between"><span>Item</span><span>10/19/2017</span></div>
           <div className="flex justify-between"><span>Item</span><Badge>Yes</Badge></div>
+          <div className="flex justify-between"><span>ItemdlfjskldjfsldjfItemdlfjskldjfsldjf</span><Badge>Yes</Badge></div>
+
+        </div>
+        <div className="space-y-2 text-sm">
+          <div className="flex justify-between"><span>Item</span><span>10/19/2017</span></div>
+          <div className="flex justify-between"><span>Item</span><Badge>Yes</Badge></div>
+          <div className="flex justify-between"><span>ItemdlfjskldjfsldjfItemdlfjskldjfsldjf</span><Badge>Yes</Badge></div>
+
         </div>
       </CardContent>
     </Card>

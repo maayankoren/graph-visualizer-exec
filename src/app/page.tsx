@@ -67,13 +67,13 @@ export default function Page() {
           <div className="grid gap-6 lg:grid-cols-[1fr_2fr]">
 
             {/* --- שמאל: Description --- */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-5">
               <DescriptionPanel />
             </div>
 
             {/* --- ימין: עטוף ב-Card אחד --- */}
             <Card>
-              <CardContent className="flex flex-col gap-6 pt-6">
+              <CardContent className="flex flex-col gap-5 ">
 
                 {/* כותרת עליונה */}
                 <h2 className="text-xl font-semibold text-green-700 px-2">
@@ -88,7 +88,7 @@ export default function Page() {
             <ShieldX />
 
             </Card> */}
-                <Card className="shadow-md rounded-xl overflow-hidden h-[500px]">
+                <Card className="shadow-none border-none overflow-hidden bg-[#FAFAFA] ">
 
 
                   <CardContent>

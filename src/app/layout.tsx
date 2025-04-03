@@ -11,21 +11,23 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body> <SidebarProvider>
-      <AppSidebar />
-      <main>
-        <SidebarTrigger />
-        {children}
-      </main>
-    </SidebarProvider>
-  </body>
+      <body className="min-h-screen flex flex-col bg-white">
+        <SidebarProvider>
+          <div className="flex flex-1 min-h-screen">
+            <AppSidebar />
+            <main className="flex-1 flex flex-col">
+              {/* <SidebarTrigger /> */}
+              {children}
+            </main>
+          </div>
+        </SidebarProvider>
+      </body>
     </html>
   );
-
 }
-

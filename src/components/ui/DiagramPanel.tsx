@@ -31,7 +31,7 @@
 // import '@xyflow/react/dist/style.css';
 // import { CustomNode } from './../CustomNode';
 // import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { VenetianMask,Server} from 'lucide-react';
+import { VenetianMask, Server } from 'lucide-react';
 // import { useEffect } from 'react';
 
 // const nodeTypes = { custom: CustomNode };
@@ -113,7 +113,7 @@ import { VenetianMask,Server} from 'lucide-react';
 // ];
 
 // export default function DiagramPanel() {
- 
+
 //   return (
 //     <div className="bg-white rounded-xl shadow p-6  flex flex-col h-[400px]">
 //       {/* <CardHeader>
@@ -131,7 +131,7 @@ import { VenetianMask,Server} from 'lucide-react';
 //           // panOnDrag={false}
 //           zoomOnScroll={false}
 //           zoomOnPinch={false}
-          
+
 //         >
 //           {/* <Background /> */}
 //           {/* <Controls showInteractive={false} /> */}
@@ -157,7 +157,7 @@ import { VenetianMask,Server} from 'lucide-react';
 // }
 import React, { useEffect } from 'react';
 import {
-  ReactFlow, 
+  ReactFlow,
   ReactFlowProvider,
   useReactFlow,
   Node,
@@ -166,7 +166,8 @@ import {
   Position,
   MarkerType,
   getSmoothStepPath,
-  EdgeProps
+  EdgeProps,
+  Background
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { CustomNode } from './../CustomNode';
@@ -247,10 +248,10 @@ const nodes: Node[] = [
   {
     id: '1',
     type: 'custom',
-    position: { x: 50, y: 100 },
+    position: { x: 30, y: 100 },
     data: {
       label: 'Loremipsumm',
-      icon: <VenetianMask size={16} />,
+      icon: <VenetianMask size={20} />,
       color: 'red',
     },
   },
@@ -260,63 +261,69 @@ const nodes: Node[] = [
     position: { x: 150, y: 100 },
     data: {
       label: 'Loremipsu',
-      icon: <Server size={16} />,
+      icon: <Server size={20} />,
       color: 'blue',
     },
   },
   {
     id: '3',
     type: 'custom',
-    position: { x: 250, y: 100 },
+    position: { x: 300, y: 100 },
     data: {
       label: 'Loremipsu',
-      icon: <Server size={16} />,
+      icon: <Server size={20} />,
       color: 'blue',
     },
   },
   {
     id: '4',
     type: 'custom',
-    position: { x: 400, y: 40 },
+    position: { x: 500, y: 50 },
     data: {
       label: 'Loremipsumdolorsit',
       sub: '192.168.1.1',
-      icon: <Server size={16} />,
+      icon: <Server size={20} />,
       color: 'red',
     },
   },
   {
     id: '5',
     type: 'custom',
-    position: { x: 400, y: 160 },
+    position: { x: 500, y: 160 },
     data: {
       label: 'Loremipsumdolorsit002',
       sub: '192.168.1.2',
-      icon: <Server size={16} />,
+      icon: <Server size={20} />,
       color: 'red',
     },
   },
 ];
 
 const edges: Edge[] = [
-  { id: 'e1-2', source: '1', target: '2',type: 'default',
-    markerEnd: {
-      type: MarkerType.ArrowClosed, 
-    }, },
-  { id: 'e2-3', source: '2', target: '3',type: 'default',
-    markerEnd: {
-      type: MarkerType.ArrowClosed,
-    }, },
-  { id: 'e3-4', source: '3', target: '4' ,type: 'soft',
-    markerEnd: {
-      type: MarkerType.ArrowClosed, 
-    },
-     },
-  { id: 'e3-5', source: '3', target: '5' ,type: 'soft',
+  {
+    id: 'e1-2', source: '1', target: '2', type: 'default',
     markerEnd: {
       type: MarkerType.ArrowClosed,
     },
+  },
+  {
+    id: 'e2-3', source: '2', target: '3', type: 'default',
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
     },
+  },
+  {
+    id: 'e3-4', source: '3', target: '4', type: 'soft',
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+    },
+  },
+  {
+    id: 'e3-5', source: '3', target: '5', type: 'soft',
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+    },
+  },
 ];
 
 function FlowContent() {
@@ -332,7 +339,7 @@ function FlowContent() {
       edges={edges}
       nodeTypes={nodeTypes}
       // edgeTypes={edgeTypes}
-      // fitView
+      fitView
       nodesDraggable={false}
       nodesConnectable={false}
       elementsSelectable={false}
@@ -340,14 +347,26 @@ function FlowContent() {
       panOnDrag={false}
       panOnScroll={false}
       zoomOnPinch={false}
- 
-    />
+      proOptions={{ hideAttribution: true }}
+      minZoom={1}
+      maxZoom={1}
+
+
+
+    >
+      <Background
+        size={1}       // עובי
+        className="w-full h-full"
+        variant='none'
+      />
+    </ReactFlow>
+
   );
 }
 
 export default function DiagramPanel() {
   return (
-    <div style={{ width: '100%', height: '300px' }}>
+    <div className="h-[25vh]">
       <ReactFlowProvider>
         <FlowContent />
       </ReactFlowProvider>
