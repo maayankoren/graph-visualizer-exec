@@ -58,10 +58,10 @@ const data = [
 
 export default function Page() {
   return (
-    <SidebarProvider>
-      <AppSidebar variant="inset" />
-      <SidebarInset>
-        <SiteHeader />
+    // <SidebarProvider>
+    //   <AppSidebar variant="inset" />
+    //   <SidebarInset>
+        // <SiteHeader />
 
         <div className="flex flex-1 flex-col px-4 py-6 md:px-8 md:py-8 bg-[#FAFAFA]">
           <div className="grid gap-6 lg:grid-cols-[1fr_2fr]">
@@ -136,59 +136,6 @@ export default function Page() {
             </Card>
           </div>
         </div>
-      </SidebarInset>
-    </SidebarProvider>
-
-    // <SidebarProvider>
-    //   <AppSidebar variant="inset" />
-    //   <SidebarInset>
-    //     <SiteHeader />
-    //     <div className="flex flex-1 flex-col">
-    //       {/* <div className="@container/main flex flex-1 flex-col gap-2">
-    //         <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-    //           <SectionCards />
-    //           <div className="px-4 lg:px-6">
-    //             <ChartAreaInteractive />
-    //           </div>
-    //           <DataTable data={data} />
-    //         </div>
-    //       </div> */}
-    //       <div className="flex gap-8">
-    //         <div className="flex  flex-col ">
-    //           {/* צד שמאל */}
-    //           <DescriptionPanel />
-    //           {/* צד ימין */}
-    //           {/* <div className="flex flex-col flex-1 gap-4">
-    //           <DiagramPanel />
-
-    //           <div className="flex gap-4">
-    //             <RiskPanel />
-    //             <RiskSummary data={data}/>
-    //           </div>
-    //         </div> */}
-    //         </div>
-
-    //           {/* צד שמאל */}
-    //           {/* <DescriptionPanel /> */}
-    //           <Card >
-    //           <div className="flex flex-col gap-4   ">
-    //             {/* צד ימין */}
-    //             {/* {/* <div className="flex flex-col flex-1 gap-4"> */}
-    //             <DiagramPanel />
-
-    //             <div className="flex gap-4">
-    //               <RiskPanel />
-    //               <RiskSummary data={data} />
-    //             </div>
-    //         </div>
-
-    //           </Card>
-
-
-    //       </div>
-
-    //     </div>
-    //   </SidebarInset>
-    // </SidebarProvider>
+      
   )
 }
