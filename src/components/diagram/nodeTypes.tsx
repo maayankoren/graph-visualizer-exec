@@ -1,5 +1,5 @@
 // components/diagram/nodeTypes.ts
-import { CustomNode } from '@/components/ui/nodes/CustomNode';
+import { CustomNode } from './../ui/nodes/CustomNode'
 
 export const nodeTypes = {
   custom: CustomNode,

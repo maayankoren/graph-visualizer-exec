@@ -1,6 +1,6 @@
 // components/diagram/useDiagramData.ts
 import { Node, Edge, MarkerType } from '@xyflow/react';
-import { VenetianMask, Server } from 'lucide-react';
+import { VenetianMask, Server, Users } from 'lucide-react';
 
 export function useDiagramData() {
     const nodes: Node[] = [
@@ -12,6 +12,8 @@ export function useDiagramData() {
                 label: 'Loremipsumm',
                 icon: <VenetianMask size={20} />,
                 color: 'red',
+                badgeIcon: <Users className="w-3 h-3 text-white" />,
+
             },
         },
         {

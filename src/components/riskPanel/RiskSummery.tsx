@@ -26,13 +26,13 @@ export default function RiskSummary({ data }: { data: RiskItem[] }) {
       <CardContent className="flex items-center justify-between">
         <PieIndex data={data}/>
 
-        <div className="w-24 h-24">
-          <PieChart width={96} height={96}>
+        <div >
+          <PieChart width={160} height={160}>
             <Pie
               data={data}
               dataKey="value"
-              innerRadius={34}
-              outerRadius={40}
+              innerRadius={55}
+              outerRadius={65}
               stroke="none"
               startAngle={90}
               endAngle={-270}

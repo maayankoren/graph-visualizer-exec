@@ -22,7 +22,9 @@ export default function RootLayout({
           <div className="flex flex-1 min-h-screen">
             <AppSidebar />
             <main className="flex-1 flex flex-col h-screen">
-              <SidebarTrigger />
+              {/* <SidebarTrigger />
+               */}
+               
               {children}
             </main>
           </div>
