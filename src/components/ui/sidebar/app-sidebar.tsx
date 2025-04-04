@@ -6,15 +6,13 @@ import {
   SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarTrigger,
-} from "@/components/ui/sidebar"
-import { NavUser } from "./nav-user"
+} from "@/components/ui/sidebar/sidebar"
+import { NavUser } from "./NavUser"
 
-// Menu items.
 const items = [
   {
     title: "Home",
@@ -46,25 +44,22 @@ const items = [
 export function AppSidebar() {
   return (
     <Sidebar>
-       <div className="absolute top-4 -right-4 z-50">
+      <div className="absolute top-4 -right-4 z-50">
         <div className="bg-green-600 text-white rounded-full p-2 shadow-lg pointer-events-auto [&>*]:hover:bg-inherit [&>*]:hover:text-inherit">
           <SidebarTrigger />
         </div>
       </div>
       <SidebarContent>
         <SidebarGroup>
-          {/* <SidebarGroupLabel>Application</SidebarGroupLabel> */}
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    {/* <a href={item.url}> */}
                     <div>
                       <item.icon />
                       <span>{item.title}</span>
-                      </div>
-                    {/* </a> */}
+                    </div>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -73,8 +68,9 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={"data.user"} />
+        <NavUser user={{ firstName: "John", lastName: "Doe" }} />
       </SidebarFooter>
     </Sidebar>
   )
 }
+

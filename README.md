@@ -1,57 +1,114 @@
-# Graph Visualization Exercise 🌳
+# Graph Visualizer
 
-Hey there! 👋 Thanks for taking on our frontend coding exercise. We've put together this task to see how you approach building interactive UI components and organize your code. Don't worry - we're not looking for perfection, but rather your thought process and coding style.
+A modern and modular web application for visualizing contextual risk through interactive diagrams and structured data panels.
 
-## The Task
+## 🧠 Overview
 
-Your mission is to create a graph visualization screen that allows users to explore connected nodes and their relationships. The main features include:
+The **Graph Visualizer** enables users to explore a system or network of interconnected assets, and understand contextual risks through:
 
-- Display an interactive graph using React Flow
-- Implement a popover that appears when clicking on nodes
-- Style the components to match the provided design
-- Ensure smooth interactions and state management
+- Interactive diagrams
+- Risk panels and severity summaries
+- Rich metadata and descriptions
+- Visual indicators for threat levels
 
-You can find the design to implement here:
-[Figma Design](https://www.figma.com/design/TYWFAUS25dmEMSkhvGBU2G/Untitled?node-id=0-1&m=dev&t=2RggZ0VFf1ubuiqA-1)
+Designed with responsiveness, modularity, and clarity in mind.
 
-Here's what we'll be looking at:
+---
 
-- Component organization and reusability
-- Clean and maintainable CSS implementation
-- State management approach
-- TypeScript usage and type safety
-- Overall code structure and readability
+## 🛠️ Technologies
 
-## Tech Stack
+- **Next.js** + **TypeScript** – Core framework
+- **React** – Component architecture
+- **Tailwind CSS** – Styling and layout
+- **Lucide Icons** – Modern icon library
+- **@xyflow/react** – For diagram rendering
+- **Context API** – Sidebar state management
 
-We've set up the project with some modern tools to help you get started quickly:
+---
 
-- **Next.js 14** - React framework with App Router
-- **Tailwind CSS** - For styling
-- **React Flow** - Graph visualization library
-- **shadcn/ui** - Component library
-- **TypeScript** - For type safety
+## 🧱 Layout Structure
 
-## Getting Started
-
-1. Clone this repository
-2. Install dependencies:
-```bash
-pnpm install
+```
+RootLayout
+├── SidebarProvider
+│   ├── AppSidebar (navigation)
+│   └── Page
+│       ├── DescriptionPanel (left column)
+│       └── MainRiskPanel (right column)
 ```
 
-3. Run the development server:
-```bash
-pnpm dev
+- **Left Column**: Textual descriptions, extra metadata, asset details
+- **Right Column**: Graph diagram, risk categorization, and a contextual summary
+
+---
+
+## 🧩 Main Components
+
+### `DescriptionPanel`
+Displays textual information about the selected item, including:
+
+- A description block
+- Extra metadata
+- A small label-value table (with icons for status)
+
+### `MainRiskPanel`
+The core interactive panel, includes:
+
+- `DiagramPanelExtra`: renders an interactive flow chart of assets
+- Legend showing risk types (with icons & colors)
+- `RiskPanel`: table listing assets and their contextual risk
+- `RiskSummary`: summary of risk levels (with pie-style visual)
+
+---
+
+## 📊 Risk Data Format
+
+```ts
+type RiskData = {
+  name: "Critical" | "High" | "Medium" | "Low";
+  value: number;
+  color: string; // HEX color used in charts & labels
+}
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+---
 
-## What We're Looking For
+## 📁 File Structure Highlights
 
-- **Component Structure**: How you break down the UI into reusable components
-- **CSS Organization**: Clean use of Tailwind and custom styles where needed
-- **State Management**: Efficient handling of graph data and UI state
-- **Code Quality**: Clean, readable, and well-documented code
-- **TypeScript**: Proper type definitions and usage
+```
+src/
+├── components/
+│   ├── descriptionPanel/
+│   │   └── DescriptionPanel.tsx
+│   ├── diagram/
+│   │   └── DiagramPanelExtra.tsx
+│   ├── riskPanel/
+│   │   ├── MainRiskPanel.tsx
+│   │   ├── RiskPanel.tsx
+│   │   └── RiskSummery.tsx
+│   └── ui/
+│       └── shared UI elements (card, header, icon, etc.)
+├── types/
+│   └── Global types (e.g., RiskData, User)
+```
 
+---
+
+## 📷 Preview
+
+> Add a screenshot here if available:
+> `![UI Screenshot](./screenshot.png)`
+
+---
+
+## 📌 TODO
+
+- [ ] Integrate live data from API
+- [ ] Add user roles & permissions
+- [ ] Dark mode support
+
+---
+
+## 📄 License
+
+MIT – Feel free to use, modify, and contribute.

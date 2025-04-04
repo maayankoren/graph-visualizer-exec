@@ -1,14 +1,9 @@
-import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
+import { Card} from "@/components/ui/card";
 import { DataTable } from "../DataTable";
 import { columns } from "../Columns"
+import { Asset } from "@/types/Assets";
 
 export default function RiskPanel() {
-type Asset = {
-  name: string
-  ip: string
-  risk: string
-}
-
 
 const data: Asset[] = [
   { name: "Loremipsumdolorsit", ip: "192.168.1.1", risk: "Critical" },

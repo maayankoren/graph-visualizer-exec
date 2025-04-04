@@ -17,12 +17,8 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
+import { DataTableProps } from "@/types/DataTableProps";
 
-type DataTableProps<T> = {
-  columns: ColumnDef<T>[];
-  data: T[];
-  pageSize?: number;
-};
 
 export function DataTable<T extends object>({ columns, data, pageSize = 2 }: DataTableProps<T>) {
   const table = useReactTable({
@@ -46,7 +42,7 @@ export function DataTable<T extends object>({ columns, data, pageSize = 2 }: Dat
   return (
     <div className="rounded-xl shadow-sm">
       <Table>
-        <TableHeader>
+        <TableHeader className="text-xs	">
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => (

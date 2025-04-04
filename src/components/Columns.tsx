@@ -1,13 +1,9 @@
 "use client"
 
+import { Asset } from "@/types/Assets"
 import { ColumnDef } from "@tanstack/react-table"
 import { Server } from "lucide-react"
 
-type Asset = {
-    name: string
-    ip: string
-    risk: string
-  }
   export const columns: ColumnDef<Asset>[] = [
     {
       accessorKey: "name",

@@ -1,11 +1,9 @@
 
 "use client"
 
-type RiskItem = {
-    name: string
-    value: number
-    color: string
-  }
+import { RiskItem } from "@/types/RiskItem"
+
+
 export default function PieIndex({ data }: { data: RiskItem[] }) {
 
   return (

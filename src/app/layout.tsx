@@ -1,5 +1,5 @@
-import { AppSidebar } from "@/components/app-sidebar";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/ui/sidebar/app-sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar/sidebar";
 import "@/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
@@ -22,9 +22,6 @@ export default function RootLayout({
           <div className="flex flex-1 min-h-screen">
             <AppSidebar />
             <main className="flex-1 flex flex-col h-screen">
-              {/* <SidebarTrigger />
-               */}
-               
               {children}
             </main>
           </div>
