@@ -116,7 +116,6 @@ src/
 
 - [ ] Integrate live data from API
 - [ ] Add user roles & permissions
-- [ ] Internationalization (i18n)
 - [ ] Dark mode support
 
 ---
