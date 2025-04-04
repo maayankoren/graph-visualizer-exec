@@ -2,6 +2,7 @@
 
 A modern and modular web application for visualizing contextual risk through interactive diagrams and structured data panels.
 
+
 ## 🧠 Overview
 
 The **Graph Visualizer** enables users to explore a system or network of interconnected assets, and understand contextual risks through:
