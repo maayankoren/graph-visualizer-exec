@@ -44,6 +44,19 @@ RootLayout
 
 ## 🧩 Main Components
 
+### `FlowContent` (from `components/diagram/FlowContent.tsx`)
+Responsible for rendering the graph using [`@xyflow/react`](https://reactflow.dev/).
+
+- Pulls node and edge data from `useDiagramData` hook
+- Uses custom node types from `nodeTypes`
+- Diagram is **non-interactive** (static view only):
+  - Nodes are not draggable
+  - No zooming or panning
+  - No selectable elements
+
+This component is intended for **display-only visualizations** of system flow or asset connections.
+
+
 ### `DescriptionPanel`
 Displays textual information about the selected item, including:
 
@@ -105,6 +118,7 @@ src/
 
 - [ ] Integrate live data from API
 - [ ] Add user roles & permissions
+- [ ] Internationalization (i18n)
 - [ ] Dark mode support
 
 ---
