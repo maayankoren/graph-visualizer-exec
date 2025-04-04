@@ -109,8 +109,7 @@ src/
 
 ## 📷 Preview
 
-> Add a screenshot here if available:
-> `![UI Screenshot](./screenshot.png)`
+> `![alt text](image.png)`
 
 ---
 
