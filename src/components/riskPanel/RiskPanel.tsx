@@ -1,6 +1,6 @@
 import { Card} from "@/components/ui/card";
-import { DataTable } from "../DataTable";
-import { columns } from "../Columns"
+import { DataTable } from "../table/DataTable";
+import { columns } from "../table/Columns"
 import { Asset } from "@/types/Assets";
 
 export default function RiskPanel() {
