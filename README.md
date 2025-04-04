@@ -109,7 +109,7 @@ src/
 
 ## 📷 Preview
 
-> `![alt text](image.png)`
+> `![screenshot](assets/screenshot.png)`
 
 ---
 
