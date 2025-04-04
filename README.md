@@ -56,7 +56,6 @@ Responsible for rendering the graph using [`@xyflow/react`](https://reactflow.de
 
 This component is intended for **display-only visualizations** of system flow or asset connections.
 
-
 ### `DescriptionPanel`
 Displays textual information about the selected item, including:
 
@@ -110,6 +109,32 @@ src/
 ## 📷 Preview
 
 ![screenshot](assets/screenshot.png)
+
+---
+
+## 📌 Getting Started
+
+Clone this repository:
+
+```bash
+git clone https://github.com/your-username/graph-visualizer.git
+cd graph-visualizer
+```
+
+Install dependencies:
+
+```bash
+pnpm install
+```
+
+Run the development server:
+
+```bash
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the app in action.
+
 ---
 
 ## 📌 TODO
